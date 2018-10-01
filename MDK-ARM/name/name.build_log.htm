@@ -21,15 +21,15 @@ Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.1.0
 Dialog DLL:      TCM.DLL V1.32.0.0
  
 <h2>Project:</h2>
-C:\Users\Пользователь\Desktop\цуим\coim\home\name\MDK-ARM\name.uvprojx
+C:\Users\Пользователь\Desktop\проекты\servoprivod\MDK-ARM\name.uvprojx
 Project File Date:  10/05/2017
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 5 (build 528)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
 Build target 'name'
+compiling system_stm32f4xx.c...
 compiling stm32f4xx_hal.c...
 compiling stm32f4xx_hal_pwr_ex.c...
-compiling system_stm32f4xx.c...
 compiling stm32f4xx_hal_flash_ramfunc.c...
 compiling stm32f4xx_hal_cortex.c...
 compiling stm32f4xx_hal_pwr.c...
@@ -42,10 +42,16 @@ compiling stm32f4xx_hal_tim.c...
 compiling stm32f4xx_hal_rcc_ex.c...
 compiling stm32f4xx_hal_flash_ex.c...
 compiling stm32f4xx_hal_flash.c...
-compiling stm32f4xx_it.c...
 compiling stm32f4xx_hal_spi.c...
+compiling stm32f4xx_it.c...
 compiling stm32f4xx_hal_msp.c...
 assembling startup_stm32f407xx.s...
+compiling main.c...
+../Src/main.c(122): warning:  #223-D: function "Accel_Ini" declared implicitly
+    Accel_Ini();
+../Src/main.c(129): warning:  #223-D: function "Accel_ReadAcc" declared implicitly
+  		pulse = Accel_ReadAcc(); 
+../Src/main.c: 2 warnings, 0 errors
 compiling lis3dsh.c...
 ..\Src\lis3dsh.h(88): warning:  #1-D: last line of file ends without a newline
   #endif /* LIS3DSH_H_ */
@@ -54,12 +60,6 @@ compiling lis3dsh.c...
 ..\Src\lis3dsh.c(215): warning:  #1-D: last line of file ends without a newline
   }
 ..\Src\lis3dsh.c: 3 warnings, 0 errors
-compiling main.c...
-../Src/main.c(122): warning:  #223-D: function "Accel_Ini" declared implicitly
-    Accel_Ini();
-../Src/main.c(129): warning:  #223-D: function "Accel_ReadAcc" declared implicitly
-  	n=Accel_ReadAcc(); 
-../Src/main.c: 2 warnings, 0 errors
 linking...
 Program Size: Code=5946 RO-data=442 RW-data=8 ZI-data=16536  
 "name\name.axf" - 0 Error(s), 5 Warning(s).
@@ -67,8 +67,8 @@ Program Size: Code=5946 RO-data=442 RW-data=8 ZI-data=16536
 <h2>Software Packages used:</h2>
 
 Package Vendor: ARM
-                http://www.keil.com/pack/ARM.CMSIS.5.1.1.pack
-                ARM.CMSIS.5.1.1
+                http://www.keil.com/pack/ARM.CMSIS.5.2.0.pack
+                ARM.CMSIS.5.2.0
                 CMSIS (Cortex Microcontroller Software Interface Standard)
    * Component: CORE Version: 5.0.2
 
@@ -79,13 +79,13 @@ Package Vendor: Keil
 
 <h2>Collection of Component include folders:</h2>
   .\RTE\_name
-  C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.1.1\CMSIS\Include
+  C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.2.0\CMSIS\Include
   C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include
 
 <h2>Collection of Component Files used:</h2>
 
    * Component: ARM::CMSIS:CORE:5.0.2
-Build Time Elapsed:  00:02:20
+Build Time Elapsed:  00:02:19
 </pre>
 </body>
 </html>

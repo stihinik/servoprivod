@@ -94,7 +94,7 @@ int main(void)
 {
 
   /* USER CODE BEGIN 1 */
-	uint16_t n;
+	uint16_t pulse;
   /* USER CODE END 1 */
 
   /* MCU Configuration----------------------------------------------------------*/
@@ -126,12 +126,12 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	n=Accel_ReadAcc(); 
-  HAL_Delay(10);		
-  MX_TIM6_Init2(n);		
-	
-  HAL_TIM_Base_Start_IT(&htim6);	
-  HAL_Delay(100);		
+		pulse = Accel_ReadAcc(); 
+		HAL_Delay(10);		
+		MX_TIM6_Init2(pulse);		
+		
+		HAL_TIM_Base_Start_IT(&htim6);	
+		HAL_Delay(100);		
 	}
   /* USER CODE END WHILE */
 
